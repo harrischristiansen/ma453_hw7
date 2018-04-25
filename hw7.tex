@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\input{headers7}
+
+\usepackage{fancyhdr}   
+\pagestyle{fancy}      
+\lhead{MA453 Spring 2018 - Homework 7}               
+\rhead{Harris Christiansen (christih@purdue.edu)}
+
+\usepackage{mathrsfs}
+\usepackage[strict]{changepage}  
+\newcommand{\nextoddpage}{\checkoddpage\ifoddpage{\ \newpage\ \newpage}\else{\ \newpage}\fi}
+
+\begin{document}
+
+\title{Homework 7}
+\date{p131 D.1 and D.2, p143 C.1, C.3, C.4, and C.8}
+\maketitle
+
+\thispagestyle{fancy}  
+\pagestyle{fancy}      
+
+\begin{enumerate}
+
+%%% Problem p131 D.1
+\item {\bfseries p131 D.1} Let $G$ be a finite group, and let $H$ and $K$ be subgroups of $G$. Prove the following:
+	
+	Suppose $H \subseteq K$ (therefore $H$ is a subgroup of $K$). Then $(G:H)=(G:K)(K:H)$.
+  
+	{\bfseries Solution.}
+
+%%% Problem p131 D.2
+\item {\bfseries p131 D.2} Let $G$ be a finite group, and let $H$ and $K$ be subgroups of $G$. Prove the following:
+	
+	The order of $H \cap K$ is a common divisor of the order of $H$ and the order of $K$.
+  
+	{\bfseries Solution.}
+  
+\newpage
+
+%%% Problem p143 C.1
+\item {\bfseries p143 C.1} Let $G$, $H$, and $K$ be groups. Prove the following:
+ 
+	If $f : G \rightarrow H$ and $g : H \rightarrow K$ are homomorphisms, then their composite $g \circ f : G \rightarrow K$ is a homomorphism.
+  
+	{\bfseries Solution.}
+
+%%% Problem p143 C.3
+\item {\bfseries p143 C.3} Let $G$, $H$, and $K$ be groups. Prove the following:
+ 
+	If $f : G \rightarrow H$ is a homomorphism and K is any subgroup of G, then $f(K) = \{f(x) : x \in K\}$ is a subgroup of H.
+  
+	{\bfseries Solution.}
+
+%%% Problem p143 C.4
+\item {\bfseries p143 C.4} Let $G$, $H$, and $K$ be groups. Prove the following:
+ 
+	If $f : G \rightarrow H$ is a homomorphism and J is any subgroup of H, then
+	$$f^{-1}(J) = \{x \in G : f(x) \in J\}$$
+	is a subgroup of G. Furthermore, ker $f \subseteq f^{-1}(J)$.
+  
+	{\bfseries Solution.}
+
+%%% Problem p143 C.8
+\item {\bfseries p143 C.8} Let $G$, $H$, and $K$ be groups. Prove the following:
+ 
+	The function $f : G \rightarrow G$ defined by $f(x) = x^2$ is a homomorphism iff $G$ is abelian.
+  
+	{\bfseries Solution.}
+
+\end{enumerate}
+
+\end{document}
