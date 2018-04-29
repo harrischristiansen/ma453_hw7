@@ -27,6 +27,13 @@
 	Suppose $H \subseteq K$ (therefore $H$ is a subgroup of $K$). Then $(G:H)=(G:K)(K:H)$.
   
 	{\bfseries Solution.}
+	
+	\begin{proof}
+	By definition $(G:H) =$ order of $G$ / order of $H$.
+	
+	Thus, $(G:K)(K:H) =$ (order of $G$ / order of $K$) * (order of $K$ / order of $H$), which can be simplified to order of $G$ / order of $H$.
+	\end{proof}
+
 
 %%% Problem p131 D.2
 \item {\bfseries p131 D.2} Let $G$ be a finite group, and let $H$ and $K$ be subgroups of $G$. Prove the following:
@@ -34,8 +41,14 @@
 	The order of $H \cap K$ is a common divisor of the order of $H$ and the order of $K$.
   
 	{\bfseries Solution.}
-  
-\newpage
+	
+	\begin{proof}
+	Let $h$ be the order of $H$, $k$ be the order of $K$, and $i$ be the order of $H \cap K$.
+	
+	By Lagrange's theorem, since $H \cap K$ is a subgroup of $H$, it follows that $i$ divides $h$. Additionally, since $H \cap K$ is a subgroup of $K$, it follows that $i$ divides $k$.
+	
+	Thus the order of $H \cap K$ is a common divisor of the order of $H$ and the order of $K$.
+	\end{proof}
 
 %%% Problem p143 C.1
 \item {\bfseries p143 C.1} Let $G$, $H$, and $K$ be groups. Prove the following:
@@ -43,22 +56,46 @@
 	If $f : G \rightarrow H$ and $g : H \rightarrow K$ are homomorphisms, then their composite $g \circ f : G \rightarrow K$ is a homomorphism.
   
 	{\bfseries Solution.}
+	
+	\begin{proof}
+	Let $a, b \in G$. The composite 	$(g \circ f)(a*b) = g(f(a*b)) = g(f(a) * f(b)) = g(f(a)) * g(f(b)) = (g \circ f)(a) * (g \circ f)(b)$. Thus, the composite is a homomorphism.
+	\end{proof}
+
 
 %%% Problem p143 C.3
 \item {\bfseries p143 C.3} Let $G$, $H$, and $K$ be groups. Prove the following:
  
-	If $f : G \rightarrow H$ is a homomorphism and K is any subgroup of G, then $f(K) = \{f(x) : x \in K\}$ is a subgroup of H.
+	If $f : G \rightarrow H$ is a homomorphism and K is any subgroup of $G$, then $f(K) = \{f(x) : x \in K\}$ is a subgroup of $H$.
   
 	{\bfseries Solution.}
+	
+	\begin{proof}
+	To prove $f(K) = \{f(x) : x \in K\}$ is a subgroup of $H$, we must show:
+	\begin{itemize}
+		\item The subgroup is closed, as it is created from a closed group.
+		\item The subgroup is closed under inversion.
+		\item For $a, b \in K$, there must exist $a*b \in K$, which is true since $K$ is a subgroup of $G$. Additionally, since $f : G \rightarrow H$ is a homomorphism and K is any subgroup of G, we know $f(K)$ is closed.
+		\item For $a \in K$, there must exist $a^{-1} \in K$ because K is a subgroup of G. Additionally, since $f$ is a homomorphism, we know $f(K)$ is closed under inversion.
+	\end{itemize}
+	Thus, $f(K)$ is a subgroup of $H$.
+	\end{proof}
+
 
 %%% Problem p143 C.4
 \item {\bfseries p143 C.4} Let $G$, $H$, and $K$ be groups. Prove the following:
  
-	If $f : G \rightarrow H$ is a homomorphism and J is any subgroup of H, then
+	If $f : G \rightarrow H$ is a homomorphism and J is any subgroup of $H$, then
 	$$f^{-1}(J) = \{x \in G : f(x) \in J\}$$
-	is a subgroup of G. Furthermore, ker $f \subseteq f^{-1}(J)$.
+	is a subgroup of $G$. Furthermore, ker $f \subseteq f^{-1}(J)$.
   
 	{\bfseries Solution.}
+	
+	\begin{proof}
+	We must show the same criteria as the previous problem.
+	Because $f$ is a homomorphism and $J$ is a subgroup of $H$, we know these criteria are satisfied.
+	Thus, $f^{-1}(J)$ is a subgroup of $G$.
+	\end{proof}
+
 
 %%% Problem p143 C.8
 \item {\bfseries p143 C.8} Let $G$, $H$, and $K$ be groups. Prove the following:
@@ -66,6 +103,14 @@
 	The function $f : G \rightarrow G$ defined by $f(x) = x^2$ is a homomorphism iff $G$ is abelian.
   
 	{\bfseries Solution.}
+	
+	\begin{proof}
+	Prove both directions:
+	
+	Suppose $f$ is a homomorphism. Thus $f(x*y) = f(x)*f(y)$ for $x, y \in G$. Using the definition of $f$ we get $f(xy) = (xy)^2 = xyxy$. Because $f$ is a homomorphism, $f(xy) = f(x)f(y) = x^2y^2$, thus $G$ must be abelian.
+	
+	Suppose $G$ is abelian, meaning $xy = yx$. We can show $f(xy) = (xy)^2 = xyxy = xxyy = x^2y^2 = f(x)f(y)$. Thus, because $G$ is abelian, $f$ must be a homomorphism.
+	\end{proof}
 
 \end{enumerate}
 
